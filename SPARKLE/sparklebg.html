@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+  
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        max-width: 20%;
+        margin: 4% 0% 0% 2%;
+    }
+    .gallery img{
+       width: 200px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        transition: scale 350ms ,ease ,opacity 350ms linear;
+    }
+    .gallery:has(img:hover) img:not(:hover){
+        scale: 0.8;
+        opacity: 0.5;
+    }
+    .gallery img:hover{
+        box-shadow: 0 0 5px #03e9f4 , 0 0 15px #03e9f4 , 0 0 25px #03e9f4 , 0 0 100px #03e9f4 ;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="gallery">
+        <img src="../MINION/Images/minion1.jpg">
+        <img src="../MINION/Images/minion2.jpg">
+        <img src="../MINION/Images/minion3.jpg">
+        <img src="../MINION/Images/minion4.jpg">
+    </div>
+</body>
+</html
